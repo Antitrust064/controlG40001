@@ -1,0 +1,44 @@
+class Student:
+    def __init__(self, age, height, gender):
+        self.age = age
+        self.height = height
+        self.gender = gender
+
+students = []
+
+def index_student(age, height, gender):
+    student = Student(age, height, gender)
+    students.append(student)
+
+# Indexing students
+index_student(20, 165, 'male')
+index_student(22, 170, 'female')
+index_student(19, 160, 'unicorn')
+index_student(25, 180, 'dog')
+index_student(21, 175, 'elephant')
+index_student(18, 155, 'ape')
+index_student(23, 185, 'bottle of water')
+index_student(24, 190, 'hotel')
+index_student(30, 200, 'rain')
+
+# Sorting students by age
+students_sorted_by_age = sorted(students, key=lambda student: student.age)
+
+# Sorting students by height
+students_sorted_by_height = sorted(students, key=lambda student: student.height)
+
+# Sorting students by gender
+students_sorted_by_gender = sorted(students, key=lambda student: student.gender)
+
+# Displaying sorted students
+print("Students sorted by age:")
+for student in students_sorted_by_age:
+    print(f"Age: {student.age}, Height: {student.height}, Gender: {student.gender}")
+
+print("\nStudents sorted by height:")
+for student in students_sorted_by_height:
+    print(f"Age: {student.age}, Height: {student.height}, Gender: {student.gender}")
+
+print("\nStudents sorted by gender:")
+for student in students_sorted_by_gender:
+    print(f"Age: {student.age}, Height: {student.height}, Gender: {student.gender}")
